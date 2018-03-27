@@ -1,0 +1,49 @@
+---
+name: home
+url: /
+controller: gitController
+---
+
+<h1>STORED-API</h1>
+<div class="grid-frame" ng-init="pullslist()">
+  <div class="grid-block" ng-repeat="pull in pulls">
+    <div class="grid-content">
+      <div class="card profile-card-action-icons">
+        <div class="card-section">
+          <div class="profile-card-header">
+            <div class="profile-card-avatar">
+              <img class="avatar-image" src="{{ pull.avatar_url }}" alt="Harry Manchanda">
+            </div>
+            <div class="profile-card-author">
+              <h5 class="author-title">{{ pull.title }}</h5>
+              <p class="author-description">{{ pull.username }}</p>
+              <p class="author-description">{{ pull.updated_at }}</p>
+            </div>
+          </div>
+          <div class="profile-card-about">
+            <h5 class="about-title separator-left">Descrição</h5>
+            <p class="about-content">
+              {{ pull.message }}
+            </p>
+            <div class="row about-skills">
+              <div class="small-6 columns">
+                <ul class="arrow">
+                  <li>Coding</li>
+                  <li>Cricket</li>
+                  <li>Enjoying</li>
+                </ul>
+              </div>
+              <div class="small-6 columns">
+                <ul class="arrow">
+                  <li>Maths</li>
+                  <li>Dancing</li>
+                  <li>Smiling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
